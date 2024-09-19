@@ -1579,6 +1579,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@egjs/hammerjs@npm:^2.0.17":
+  version: 2.0.17
+  resolution: "@egjs/hammerjs@npm:2.0.17"
+  dependencies:
+    "@types/hammerjs": ^2.0.36
+  checksum: 8945137cec5837edd70af3f2e0ea621543eb0aa3b667e6269ec6485350f4d120c2434b37c7c30b1cf42a65275dd61c1f24626749c616696d3956ac0c008c4766
+  languageName: node
+  linkType: hard
+
 "@eslint-community/eslint-utils@npm:^4.2.0, @eslint-community/eslint-utils@npm:^4.4.0":
   version: 4.4.0
   resolution: "@eslint-community/eslint-utils@npm:4.4.0"
@@ -2259,6 +2268,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@react-native-masked-view/masked-view@npm:^0.3.1":
+  version: 0.3.1
+  resolution: "@react-native-masked-view/masked-view@npm:0.3.1"
+  peerDependencies:
+    react: ">=16"
+    react-native: ">=0.57"
+  checksum: 880059020709ce856c448657c2d67a905f2ebcd3f42c1c4d344d732761cb2de98efb600172df5591d943f562393dbca42802e8a903b974aa2b038b441c5718fb
+  languageName: node
+  linkType: hard
+
 "@react-native/assets-registry@npm:0.75.3":
   version: 0.75.3
   resolution: "@react-native/assets-registry@npm:0.75.3"
@@ -2580,6 +2599,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@react-navigation/stack@npm:^6.4.1":
+  version: 6.4.1
+  resolution: "@react-navigation/stack@npm:6.4.1"
+  dependencies:
+    "@react-navigation/elements": ^1.3.31
+    color: ^4.2.3
+    warn-once: ^0.1.0
+  peerDependencies:
+    "@react-navigation/native": ^6.0.0
+    react: "*"
+    react-native: "*"
+    react-native-gesture-handler: ">= 1.0.0"
+    react-native-safe-area-context: ">= 3.0.0"
+    react-native-screens: ">= 3.0.0"
+  checksum: 09bcfb001db0f411df881da9f2551b7015c4d5259a77fcb93196de308838035d016dc4dcb654d16d9cd4cc99f09f5e48add796aa903f9a253678947c35b18199
+  languageName: node
+  linkType: hard
+
 "@sideway/address@npm:^4.1.5":
   version: 4.1.5
   resolution: "@sideway/address@npm:4.1.5"
@@ -2822,6 +2859,13 @@ __metadata:
   dependencies:
     "@types/node": "*"
   checksum: 79d746a8f053954bba36bd3d94a90c78de995d126289d656fb3271dd9f1229d33f678da04d10bce6be440494a5a73438e2e363e92802d16b8315b051036c5256
+  languageName: node
+  linkType: hard
+
+"@types/hammerjs@npm:^2.0.36":
+  version: 2.0.45
+  resolution: "@types/hammerjs@npm:2.0.45"
+  checksum: 40a29067c485a2a1f4345718104218fcf769adb1dbe091cdb6f679b3293dfa0798b207eb498ee7fd79ae8664c999117738fa0c01753f7465a639128f38c3ff5b
   languageName: node
   linkType: hard
 
@@ -3151,6 +3195,7 @@ __metadata:
     "@babel/preset-env": ^7.20.0
     "@babel/runtime": ^7.20.0
     "@eva-design/eva": ^2.2.0
+    "@react-native-masked-view/masked-view": ^0.3.1
     "@react-native/babel-preset": 0.75.3
     "@react-native/eslint-config": 0.75.3
     "@react-native/metro-config": 0.75.3
@@ -3158,6 +3203,7 @@ __metadata:
     "@react-navigation/bottom-tabs": ^6.6.1
     "@react-navigation/native": ^6.1.18
     "@react-navigation/native-stack": ^6.11.0
+    "@react-navigation/stack": ^6.4.1
     "@types/react": ^18.2.6
     "@types/react-test-renderer": ^18.0.0
     "@ui-kitten/components": ^5.3.1
@@ -3167,11 +3213,14 @@ __metadata:
     prettier: 2.8.8
     react: 18.3.1
     react-native: 0.75.3
+    react-native-gesture-handler: ^2.19.0
+    react-native-pager-view: ^6.4.1
     react-native-safe-area-context: ^4.11.0
     react-native-screens: ^3.34.0
     react-native-svg: ^15.7.1
     react-native-svg-transformer: ^1.5.0
     react-native-swiper: ^1.6.0
+    react-native-tab-view: ^3.5.2
     react-test-renderer: 18.3.1
     typescript: 5.0.4
   languageName: unknown
@@ -5676,7 +5725,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"hoist-non-react-statics@npm:^3.2.1":
+"hoist-non-react-statics@npm:^3.2.1, hoist-non-react-statics@npm:^3.3.0":
   version: 3.3.2
   resolution: "hoist-non-react-statics@npm:3.3.2"
   dependencies:
@@ -8277,7 +8326,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prop-types@npm:^15.5.10, prop-types@npm:^15.8.1":
+"prop-types@npm:^15.5.10, prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
   version: 15.8.1
   resolution: "prop-types@npm:15.8.1"
   dependencies:
@@ -8377,6 +8426,31 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-native-gesture-handler@npm:^2.19.0":
+  version: 2.19.0
+  resolution: "react-native-gesture-handler@npm:2.19.0"
+  dependencies:
+    "@egjs/hammerjs": ^2.0.17
+    hoist-non-react-statics: ^3.3.0
+    invariant: ^2.2.4
+    prop-types: ^15.7.2
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  checksum: ce9b9fc6537debf962e6b8d84f1c4cf18fe00f39bd86498e84a203ebb26bf3543c2642ed247d974537840407b7ddb602939fd8c817c00a3416e87bddc8f2088f
+  languageName: node
+  linkType: hard
+
+"react-native-pager-view@npm:^6.4.1":
+  version: 6.4.1
+  resolution: "react-native-pager-view@npm:6.4.1"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  checksum: 558f08efccf748eed91a2a88be4f90e49e2b63a28c1b9db5de9711eb324a75e9565a3dbf92c523a623a2c7d5a7e0d8a0db88599bc85d33158544a7d0e724319e
+  languageName: node
+  linkType: hard
+
 "react-native-safe-area-context@npm:^4.11.0":
   version: 4.11.0
   resolution: "react-native-safe-area-context@npm:4.11.0"
@@ -8435,6 +8509,19 @@ __metadata:
   dependencies:
     prop-types: ^15.5.10
   checksum: 21e7a270dce6d249f718377a8aa2578c9a89b2b076710f6a60dc849ace5b47ade9e071345607947e738c0fdb06b17d9dad6ef99a8f76d7072b13bf3655026225
+  languageName: node
+  linkType: hard
+
+"react-native-tab-view@npm:^3.5.2":
+  version: 3.5.2
+  resolution: "react-native-tab-view@npm:3.5.2"
+  dependencies:
+    use-latest-callback: ^0.1.5
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+    react-native-pager-view: "*"
+  checksum: bd287e5543881aa662ee55418a3bd5dacb25033425a9fcb0fff21c3a3b96f956af1a77cd9bab4e7a8e94590080a5d8e3cb99cfa8613b19bf6da24bfc9b4942d4
   languageName: node
   linkType: hard
 
@@ -9849,6 +9936,15 @@ __metadata:
   dependencies:
     punycode: ^2.1.0
   checksum: 7167432de6817fe8e9e0c9684f1d2de2bb688c94388f7569f7dbdb1587c9f4ca2a77962f134ec90be0cc4d004c939ff0d05acc9f34a0db39a3c797dada262633
+  languageName: node
+  linkType: hard
+
+"use-latest-callback@npm:^0.1.5":
+  version: 0.1.11
+  resolution: "use-latest-callback@npm:0.1.11"
+  peerDependencies:
+    react: ">=16.8"
+  checksum: cc6df404a4ed3a39d0eb014a815c2e568a6abbe8c5ff09f9205a08bf68e86201826ed633865a6056ca0fd9581e0e7e70f18ca26c592a9eaccea5d244cf283b1f
   languageName: node
   linkType: hard
 

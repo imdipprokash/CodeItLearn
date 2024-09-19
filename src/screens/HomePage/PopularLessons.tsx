@@ -9,10 +9,12 @@ import {
 import React from 'react';
 import {Colors, Sizes} from '../../utils/Colors';
 import {StarIcon, TimeIcon} from '../../assets/images/svg';
+import {useNavigation} from '@react-navigation/native';
 
 type Props = {};
 
 const PopularLessons = (props: Props) => {
+  const nav = useNavigation<any>();
   const data = [
     {
       id: 1,
@@ -34,7 +36,11 @@ const PopularLessons = (props: Props) => {
 
   const renderItem = ({item}: any) => {
     return (
-      <View style={[styles.lessonView, {paddingHorizontal: 16, gap: 10}]}>
+      <TouchableOpacity
+        style={[styles.lessonView, {paddingHorizontal: 16, gap: 10}]}
+        onPress={() => {
+          nav?.navigate('CourseOverview', item);
+        }}>
         {/* Image */}
         <Image source={item.image} style={styles.imageStyle} />
         {/* Title */}
@@ -68,7 +74,7 @@ const PopularLessons = (props: Props) => {
             </Text>
           </View>
         </View>
-      </View>
+      </TouchableOpacity>
     );
   };
   return (
