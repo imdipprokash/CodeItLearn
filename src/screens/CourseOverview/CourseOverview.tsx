@@ -60,6 +60,23 @@ const CourseOverView = (props: any) => {
         {/*  Lessons dtls*/}
         <LessonsDtls />
       </ScrollView>
+      {/* Footer */}
+      <View style={styles.footerContainerStyle}>
+        <View style={styles.itemViewStyle}>
+          <Text style={styles.textStyle}>$399</Text>
+        </View>
+        <View
+          style={[
+            styles.itemViewStyle,
+            {
+              flexGrow: 1,
+              alignItems: 'center',
+              backgroundColor: Colors.activeColor,
+            },
+          ]}>
+          <Text style={[styles.textStyle, {color: '#fff'}]}>Enroll Now</Text>
+        </View>
+      </View>
     </SafeAreaView>
   );
 };
@@ -90,5 +107,44 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     paddingVertical: 6,
     borderRadius: 8,
+  },
+  footerContainerStyle: {
+    position: 'absolute',
+    bottom: 20,
+    backgroundColor: Colors.mainColor,
+    // width: Sizes.screenWidth,
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 20,
+    alignSelf: 'center',
+    paddingHorizontal: 15,
+    paddingTop: 20,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: -1,
+    },
+    shadowOpacity: 0.2,
+    shadowRadius: 1.41,
+
+    elevation: 2,
+  },
+  itemViewStyle: {
+    padding: 10,
+    backgroundColor: '#fff',
+    borderRadius: 10,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.08,
+    shadowRadius: 1.0,
+    elevation: 1,
+  },
+  textStyle: {
+    fontSize: 25,
+    fontWeight: '600',
+    color: Colors.activeColor,
   },
 });

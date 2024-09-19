@@ -8,7 +8,12 @@ type Props = {};
 const LessonsDtls = (props: Props) => {
   const [state, setActiveItem] = useState<any>('lessons');
 
-  const data = [{id: 1}, {id: 2}, {id: 3}];
+  const data = [
+    {id: 1, title: 'Introduction to figma', time: '04.28'},
+    {id: 2, title: 'Understanding Interface', time: '06.12'},
+    {id: 3, title: 'Create first design project', time: '46.12'},
+    {id: 4, title: 'Prototyping the design', time: '46.12'},
+  ];
 
   const lessonComponent = () => {
     return data?.map(item => (
@@ -24,16 +29,21 @@ const LessonsDtls = (props: Props) => {
             {justifyContent: 'space-between', gap: 10},
           ]}>
           <View
-            style={{
-              backgroundColor: '#4393F4',
-              padding: 6,
-              borderRadius: 9999,
-            }}>
-            <PlayIcon width={35} height={35} color="white" />
+            style={[
+              styles.playBtnStyle,
+              {backgroundColor: item.id === 1 ? '#4393F4' : '#fff'},
+            ]}>
+            <PlayIcon
+              width={35}
+              height={35}
+              color={item.id !== 1 ? '#4393F4' : '#fff'}
+            />
           </View>
           <View>
-            <Text style={styles.headerTextStyle}>Introduction to figma</Text>
-            <Text style={styles.subHeadingText}>04.28 min</Text>
+            <Text style={styles.headerTextStyle} numberOfLines={1}>
+              {item?.title}
+            </Text>
+            <Text style={styles.subHeadingText}>{item?.time} min</Text>
           </View>
         </View>
 
@@ -137,5 +147,17 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: '600',
     color: 'gray',
+  },
+  playBtnStyle: {
+    padding: 6,
+    borderRadius: 9999,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 1,
+    },
+    shadowOpacity: 0.18,
+    shadowRadius: 1.0,
+    elevation: 1,
   },
 });
