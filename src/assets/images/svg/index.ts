@@ -9,6 +9,7 @@ import StarIcon from './StarIcon.svg';
 import ArrowLeft from './ArrowLeft.svg';
 import ArrowRight from './ArrowRight.svg';
 import PlayIcon from './PlayIcon.svg';
+import SearchIcon from './SearchIcon.svg';
 export {
   BellIcon,
   ActiveHomeIcon,
@@ -21,4 +22,5 @@ export {
   ArrowLeft,
   ArrowRight,
   PlayIcon,
+  SearchIcon,
 };
