@@ -1,5 +1,6 @@
 import {
   Image,
+  Platform,
   SafeAreaView,
   ScrollView,
   StyleSheet,
@@ -110,7 +111,7 @@ const styles = StyleSheet.create({
   },
   footerContainerStyle: {
     position: 'absolute',
-    bottom: 20,
+    bottom: Platform.OS === 'ios' ? 20 : 2,
     backgroundColor: Colors.mainColor,
     // width: Sizes.screenWidth,
     flexDirection: 'row',
@@ -118,14 +119,14 @@ const styles = StyleSheet.create({
     gap: 20,
     alignSelf: 'center',
     paddingHorizontal: 15,
-    paddingTop: 20,
+    paddingTop: 15,
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
-      height: -1,
+      height: -10,
     },
     shadowOpacity: 0.2,
-    shadowRadius: 1.41,
+    shadowRadius: 80,
 
     elevation: 2,
   },

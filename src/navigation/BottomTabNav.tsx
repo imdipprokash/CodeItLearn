@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {Platform, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import HomeScr from '../screens/HomePage/HomeScr';
@@ -24,7 +24,7 @@ const BottomTabNav = (props: any) => {
           backgroundColor: Colors.bgColor,
           borderTopLeftRadius: 25,
           borderTopRightRadius: 25,
-          paddingTop: 15,
+          paddingTop: Platform.OS === 'ios' ? 15 : 0,
           position: 'absolute',
         },
       }}>

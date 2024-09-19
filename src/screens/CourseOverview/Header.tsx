@@ -1,4 +1,4 @@
-import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {Platform, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
 import {ArrowLeft, ArrowRight, LoveIcon} from '../../assets/images/svg';
 import {Colors} from '../../utils/Colors';
@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
   },
   textStyle: {
     fontFamily: 'NunitoRegular',
-    fontWeight: '600',
+    fontWeight: Platform.OS === 'ios' ? '600' : 'bold',
     fontSize: 20,
     color: '#000',
   },

@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {StatusBar, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import {Colors} from '../../utils/Colors';
 import {BellIcon} from '../../assets/images/svg';
@@ -10,8 +10,9 @@ const Header = (props: Props) => {
 
   return (
     <View style={styles.mainContainer}>
+      <StatusBar barStyle={'dark-content'} backgroundColor={Colors.mainColor} />
       <View style={{gap: 6}}>
-        <Text style={styles.titleTestStyle}>Hi, {name}</Text>
+        <Text style={styles.titleTextStyle}>Hi, {name}</Text>
         <Text style={styles.subTitleStyle}>Find your lesson today!</Text>
       </View>
       {/* Notification */}
@@ -31,10 +32,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
 
-  titleTestStyle: {
+  titleTextStyle: {
     fontFamily: 'NunitoRegular',
     fontSize: 25,
     fontWeight: 'bold',
+    color: '#000',
   },
   subTitleStyle: {
     fontFamily: 'NunitoRegular',
